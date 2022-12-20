@@ -1,0 +1,267 @@
+/* 
+ * General styles common for all pages, override if necessary only in idividual
+ * css files for each page. Include in all other pages.
+ */
+
+/* ------------------------------------------------------ general + variables */
+
+:root {
+    --white: #EDEDED;
+    --grey: #888888;
+    --dark-grey: #242424;
+    --black: #0E0E0E;
+    --red: #E40333;
+    --orange: #FF7500;
+    --yellow: #FFA700;
+    --short-gradient: linear-gradient(0.25turn, var(--red), var(--orange));
+    --long-gradient: linear-gradient(0.25turn, var(--red), var(--yellow));
+}
+html {
+    font-family: "IBM Plex Sans", serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    background: var(--black);
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+}
+
+/* --------------------------------------------------------------- navigation */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--dark-grey);
+    display: grid;
+    grid-template-columns: 10% auto 1fr 10%;
+    z-index: 999;
+}
+
+header > .logo {
+    grid-column: 2;
+    min-height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+header img {
+    height: 90px;
+    width: 250px;
+}
+
+header nav {
+    grid-column: 3;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    gap: 2em;
+}
+
+header li {
+    padding: .5em 1em;
+}
+
+/* ------------------------------------------------------------------- social */
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    justify-self: end;
+    align-self: end;
+}
+
+.social > a {
+    display: block;
+    padding: 5px;
+    border: 1px solid var(--grey);
+    border-radius: 999px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.social > a:hover {
+    background: var(--white);
+    border: 1px solid var(--white);
+}
+
+.social > a > img {
+    width: 2em;
+}
+
+/* ------------------------------------------------------------- main content */
+
+article h1, article h2, article  h3 {
+    display: block;
+    background: var(--long-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 1rem 0;
+}
+
+article h1 { font-size: 3em }
+article h2 { font-size: 2.2em }
+article h3 { font-size: 1.7em }
+article h4 { font-size: 1.2em }
+article h5 { font-size: 1em; margin: 0 0 1rem 0; }
+article p {
+    margin: 0 0 3rem 0;
+}
+
+
+article h5 {
+    color: var(--grey);
+}
+
+.screen-wrapper {
+    display: grid;
+    /* media breakpoint */
+    grid-template-columns: 10% min(500px, 80%) 1fr 10%;
+    grid-template-rows: 10vh 80vh 10vh;
+}
+
+.bg-image {
+    z-index: -5;
+}
+
+.bg-image-1 {
+    background-image: url("../img/front-render.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80vh;
+}
+
+.bg-image-2 {
+    background-image: url("../img/fsae-group.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-image-3 {
+    background-image: url("../img/project.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+article .big-image-1 {
+    grid-row: 2 / 4;
+    grid-column: 2 / 4;
+}
+
+article .point {
+    grid-column: 2;
+}
+
+article .point-1  { grid-area: 2 / 2 / span 1 / span 1; align-self: end; }
+article .anchor-1 { grid-area: 1 / 1 / span 1 / span 1 }
+article .point-2  { grid-area: 2 / 2 / span 1 / span 1; align-self: end; }
+article .point-3  { grid-area: 2 / 2 / span 1 / span 1; align-self: end; }
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.button {
+    padding: .7em 1.4em;
+    border-radius: 999px;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+.secondary-button {
+    margin: 0 1em 0 0;
+    border: 1px solid var(--grey);
+}
+.secondary-button:hover {
+    background: var(--white);
+    border: 1px solid var(--white);
+    color: var(--dark-grey);
+}
+
+.main-button {
+    position: relative;
+    background: var(--white);
+    color: var(--dark-grey);
+    z-index: 5;
+}
+
+.main-button:hover {
+    background-image: var(--short-gradient);
+}
+
+/* ------------------------------------------------------------------- footer */
+
+footer {
+    background: var(--dark-grey);
+    padding: 5em 10% 2em;
+    display: grid;
+    /* media breakpoint */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer h4 {
+    margin: 0 0 2em 0;
+}
+
+footer .footer-image {
+    margin: 0 4em 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-list {
+    margin: 0 4em 3em 0;
+}
+
+footer ul {
+    padding: 0;
+    margin:0;
+    list-style: none;
+}
+
+footer li {
+    margin: 1em 0;
+}
+
+footer img {
+    width: 200px;
+    margin: 0 0 2em 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+    /* media breakpoint */

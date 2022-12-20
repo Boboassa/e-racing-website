@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniUD E-Racing</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+      <header class="navbar">
+          <div class="logo">
+              <a href="index.html"><img src="icon/main-logo.svg" alt="UniUD E-Racing Team Logo"></a>
+          </div>
+
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+          </div>
+
+          <nav>
+              <a class="nav-link" href="progetto.html">Progetto</a>
+              <a class="nav-link" href="team.html">Team</a>
+              <a class="nav-link" href="sponsor.html">Sponsor</a>
+              <a class="nav-link" href="contatti.html">Contatti</a>
+          </nav>
+      </header>
+  <article>
+      <div class="screen-wrapper bg-image bg-image-1">
+          <div class="point point-1">
+          <h5>Chi siamo</h5>
+          <h1>UniUD E-Racing</h1>
+          <p>Un team di studenti dell'università di Udine che ha come obiettivo la costruzione di una monoposto elettrica da corsa</p>
+          <div class="buttons">
+              <a class="button secondary-button" href="#obiettivo">Scopri di più</a>
+              <a class="button main-button" href="contatti.html">Contattaci</a>
+          </div>
+          </div>
+          <nav class="social">
+              <a href="https://www.instagram.com/uniuderacing/"><img src="icon/instagram.svg"></a>
+              <a href="https://www.linkedin.com/company/uniud-e-racing-team"><img src="icon/linkedin.svg"></a>
+              <a href="mailto:uniuderacingteam@uniud.it"><img src="icon/email.svg"></a>
+          </nav>
+      </div>
+<!--
+      <div class="big-image big-image-1">
+          <img src="img/front-render.webp" alt="Front view render of the prototyper of our car">
+      </div>
+-->
+
+      <div class="screen-wrapper bg-image bg-image-2">
+          <div class="anchor anchor-1" id="obiettivo"></div>
+          <div class="point point-2">
+              <h5>Obiettivo</h5>
+              <h1>La Competizione</h1>
+              <p>La nostra squadra parteciperà agli eventi Formula Student e Formula ATA, gareggiando contro team da tutta Europa</p>
+              <div class="buttons">
+                  <a class="button secondary-button" href="progetto.html">Maggiori informazioni</a>
+                  <!--
+                  <a class="button main-button" href="contatti.html"></a>
+                  -->
+              </div>
+          </div>
+      </div>
+
+      <div class="screen-wrapper bg-image bg-image-3">
+          <div class="point point-3">
+              <h5>Cosa facciamo</h5>
+              <h1>Il Progetto</h1>
+              <p>La progettazione, costruzione e messa in pista di una monoposto elettrica da competizione</p>
+              <div class="buttons">
+                  <a class="button secondary-button" href="team.html">Il nostro Team</a>
+                  <a class="button main-button" href="monoposto.html">I nostri Sponsor</a>
+              </div>
+          </div>
+      </div>
+  </article>
+
+      <footer>
+          
+          <div class="footer-image">
+          <h4>Sponsor principali</h4>
+          <!--<a href="#"><img src="icon/main-logo.svg" alt="UniUD E-Racing logo and text"></a>
+          --> <a href="https://www.uniud.it/"><img src="icon/uniud.svg" alt="Logo Università degli Studi di Udine"></a>
+              <a href="https://www.fondazionegruppopittini.it/"><img src="icon/pittini-bianco.png" alt="Logo 'Fondazione Gruppo Pittini'"></a>
+          </div>
+
+          <div class="footer-list footer-list-contatti">
+          <h4>Laboratorio</h4>
+          <ul>
+              <li>Laboratorio M5 "LINEA"</li>
+              <li>Via Sondrio 55</li>
+              <li>33100 Udine UD</li>
+          </ul>
+          </div>
+
+          <div class="footer-list footer-list-contatti">
+          <h4>Ufficio</h4>
+          <ul>
+              <li>Via delle Scienze 206</li>
+              <li>33100 Udine UD</li>
+          </ul>
+          </div>
+              
+          <div class="footer-list footer-list-social">
+          <h4>Social e contatti</h4>
+          <ul>
+              <li><a href="https://www.instagram.com/uniuderacing/">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/uniud-e-racing-team">Linkedin</a></li>
+              <li><a href="mailto:uniuderacingteam@uniud.it">uniuderacingteam@uniud.it</a></li>
+          </ul>
+          </div>
+
+      </footer>
+      <div class="copyright">
+          <p>Copyright © 2020-2022 UniUD E-Racing</p>
+      </div>
+  </body>
+  <script>
+      const hamburger = document.querySelector(".hamburger");
+      const grid = document.querySelector(".navbar");
+
+      hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          grid.classList.toggle("active");
+      })
+      document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          grid.classList.remove("active");
+      }))
+
+  </script>
+</html>
