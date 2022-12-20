@@ -5,7 +5,7 @@
 
 /* Import font definition file */
 
-@import "font.css";
+@import url("font.css");
 
 /* ------------------------------------------------------ general + variables */
 
@@ -26,7 +26,7 @@
 
 html {
     font-size: clamp(12px, 2vw, 16px);
-    font-family: "IBM Plex Sans", serif;
+    font-family: "ibmplex", serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
