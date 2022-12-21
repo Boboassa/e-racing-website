@@ -175,13 +175,12 @@ article h5 {
 .screen-wrapper {
     padding: 0 var(--padding);
     display: grid;
-    /* media breakpoint */
     grid-template-columns: 1fr;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 10vh 70vh 20vh;
 }
 
 .screen-wrapper:nth-child(1) {
-    grid-template-rows: 10vh 70vh 10vh;
+    grid-template-rows: 10vh 60vh 20vh;
 }
 
 .bg-image {
@@ -355,6 +354,10 @@ footer {
 .screen-wrapper {
     grid-template-columns: min(500px, 80%) 1fr;
     grid-template-rows: 10vh 80vh 10vh;
+}
+
+.screen-wrapper:nth-child(1) {
+    grid-template-rows: 10vh 70vh 10vh;
 }
 
 .social {
